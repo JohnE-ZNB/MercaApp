@@ -1,0 +1,22 @@
+<!-- 
+  se agrega el *ngIf="productos" es para evitar mostrar errores
+  cuando el componente realiza la consulta a la API este toma un tiempo X
+  durante ese tiempo producto es undefined por lo que se muestra un error
+  entonces lo que se hace es un if para decir que cuando sea valida se muestre
+-->
+<section class="product-card" *ngIf="producto">
+  <div class="product-container">
+    <mat-card class="card">
+      <mat-card-title-group>
+        <mat-card-title>{{ producto.nombre }}</mat-card-title>
+        <mat-card-subtitle>{{ producto.categoria}}</mat-card-subtitle>
+        <mat-card-subtitle>{{ producto.precio}}</mat-card-subtitle>
+        <img mat-card-xl-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+      </mat-card-title-group>
+      <mat-card-content>
+        {{ producto.descripcion}}
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>
+

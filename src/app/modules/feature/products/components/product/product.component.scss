@@ -1,0 +1,28 @@
+
+
+
+
+.card {
+  max-width: 400px;
+}
+
+.card-header-image {
+  background-image: url('https://img.icons8.com/plasticine/100/fa314a/product.png');
+  background-size: cover;
+}
+img {
+  max-width: 100%;
+}
+.card-container-img{
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+  }
+}

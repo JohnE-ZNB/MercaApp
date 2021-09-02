@@ -1,0 +1,23 @@
+<mat-card class="card">
+  <mat-card-header>
+    <div mat-card-avatar class="card-header-image"></div>
+    <mat-card-title>{{ producto.nombre}}</mat-card-title>
+    <mat-card-subtitle>{{ producto.categoria}}</mat-card-subtitle>
+  </mat-card-header>
+  <div class="card-container-img">
+    <img mat-card-im  age src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <!-- <img mat-card-image src="https://landscape3design.com/wp-content/uploads/2015/04/demo.png" width="250" alt="Foto de producto"> -->
+  </div>
+
+  <mat-card-content>
+    <p>{{ producto.descripcion}}</p>
+    <p class="product-price">{{ producto.precio}}</p>
+    <!-- <p class="product-inventory">{{ producto.cantidad}}</p> -->
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-raised-button [routerLink]="['/productos', producto._id]" >
+      <mat-icon>visibility</mat-icon>
+      Ver detalle</a>
+    
+  </mat-card-actions>
+</mat-card>
