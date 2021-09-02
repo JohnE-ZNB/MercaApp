@@ -1,1 +1,16 @@
-<p>product-create works!</p>
+<h1>Crear Producto</h1>
+<div class="container-box-main mat-elevation-z8">
+  <form [formGroup]="formulario" class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Email</mat-label>
+          <input formControlName="login_email" matInput placeholder="example@email.com" type="email">
+          <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input formControlName="login_pass" matInput placeholder="password" type="password">
+          <mat-icon matSuffix>password</mat-icon>
+        </mat-form-field>
+        <button [disabled]="formulario.invalid" mat-raised-button type="submit" color="primary">Guardar</button>
+      </form>
+</div>

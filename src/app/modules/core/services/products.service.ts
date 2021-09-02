@@ -24,6 +24,14 @@ export class ProductsService {
   }
 
   getProduct(id: string) {
-    return this.http.get<ProductModel>(`${environment.url_api}/productos/${id}`);
+    return this.http.get<ProductModel>(
+      `${environment.url_api}/productos/${id}`
+    );
+  }
+
+  deleteProduct(id: string) {
+    return this.http.delete<ProductModel>(
+      `${environment.url_api}/productos/${id}`
+    );
   }
 }
