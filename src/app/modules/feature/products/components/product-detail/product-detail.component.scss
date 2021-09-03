@@ -1,13 +1,43 @@
-
-.product-card{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-top: 50px;
+.card {
+  max-width: 400px;
+  margin: auto;
 }
 
-.card {
-  max-width: 600px;
-  width: 500px;
-  margin-bottom: 8px;
+.card-header-image {
+  background-image: url('https://img.icons8.com/plasticine/100/fa314a/product.png');
+  background-size: cover;
+}
+img {
+  max-width: 100%;
+}
+.card-container-img{
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 800px) {
+  .card{
+    max-width: 20%;
+    margin: auto;
+    margin-top: auto;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 600px) {
+  .card{
+    max-width: 40%;
+    margin: auto;
+    margin-top: auto;
+    margin-top: 10px;
+  }
 }

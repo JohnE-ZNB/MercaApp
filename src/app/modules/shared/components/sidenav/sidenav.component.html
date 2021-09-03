@@ -3,7 +3,7 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar>Menú</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item  routerLink="/productos">Ir a Productos</a>
       <a mat-list-item  routerLink="/admin">Lista de Productos</a>
@@ -18,7 +18,7 @@
         mat-icon-button
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">Menú</mat-icon>
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>MercaApp</span>
     </mat-toolbar>

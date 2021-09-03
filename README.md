@@ -15,8 +15,8 @@ Link de la aplicación: "http://mercaapp.web-host.s3-website-us-east-1.amazonaws
 Se trabajó con la siguientes herramientas:
 
 - [Angular CLI](https://github.com/angular/angular-cli) - versión 12.2.4.!
-- [Material Angular](https://github.com/angular/components) version 12.2.4 
-- [flexboxgrid](https://github.com/kristoferjoseph/flexboxgrid) version 6.3.1.
+- [Material Angular](https://github.com/angular/components) versión 12.2.4 
+- [flexboxgrid](https://github.com/kristoferjoseph/flexboxgrid) versión 6.3.1.
 
 ## Instalación
 

@@ -12,12 +12,10 @@
   <mat-card-content>
     <p>{{ producto.descripcion | slice:0:30}}...</p>
     <p class="product-price">{{ producto.precio | currency}}</p>
-    <!-- <p class="product-inventory">{{ producto.cantidad}}</p> -->
   </mat-card-content>
   <mat-card-actions>
     <a mat-raised-button [routerLink]="['/productos', producto._id]" color="primary" >
       <mat-icon>visibility</mat-icon>
       Ver detalle</a>
-    
   </mat-card-actions>
 </mat-card>

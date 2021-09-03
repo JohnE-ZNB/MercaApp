@@ -4,5 +4,27 @@
 }
 
 .acciones-productos{
-  margin-right: 10px;
+  margin: 5px;
+}
+
+@media (max-width: 575px) {
+  .product-inventory-hidde-column{
+    display: none;
+  }
+
+  .product-inventory-td-response{
+    text-align: center;
+    padding-right: 5px;
+  }
+}
+
+@media (max-width: 900px) {
+  .product-inventory-hidde-column{
+    display: none;
+  }
+
+  .product-inventory-td-response{
+    text-align: center;
+    padding-right: 5px;
+  }
 }
