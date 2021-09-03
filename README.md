@@ -1,31 +1,61 @@
 # MercaApp
+## _Una APP para de administración de productos_
 
-The app allows you to: Create, Read, Update and Delete a product 
-## Tecnologias usadas
+Link de la aplicación: "http://mercaapp.web-host.s3-website-us-east-1.amazonaws.com" desplegado en un Buckets AWS S3
 
-Este proyecto esta realizado con [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
-Sistema de UI [Material Angular](https://github.com/angular/components) version 12.2.4.
-Sistema de grillas con [flexboxgrid](https://github.com/kristoferjoseph/flexboxgrid) version 6.3.1.
-## Development server
+## Caracteristias
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Consultar todos los productos
+- Ver un producto más detallado
+- Admin: Ver listado de productos con opción de editar o eliminar
+- Admin: Crear un producto
 
-## Code scaffolding
+## Tecnología
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Dillinger uses a number of open source projects to work properly:
 
-## Build
+- [Angular CLI](https://github.com/angular/angular-cli) - versión 12.2.4.!
+- [Material Angular](https://github.com/angular/components) version 12.2.4 
+- [flexboxgrid](https://github.com/kristoferjoseph/flexboxgrid) version 6.3.1.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation
 
-## Running unit tests
+Angular
+```sh
+npm install -g @angular/cli
+```
+Material Angular y adicional un Schematics para navegación
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```sh
+ng add @angular/material
+ng generate @angular/material:navigation <component-name>
+```
+Flexboxgrid
 
-## Running end-to-end tests
+```sh
+npm i flexboxgrid --save
+```
+Se debe agregar dentro de angular.json dentro de styles la siguiente línea de código:
+"./node_modules/flexboxgrid/dist/flexboxgrid.min.css",
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Desarrollo
 
-## Further help
+Inicio de servidor local "http://localhost:4200/"
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```sh
+ng serve
+```
+
+## construcción de la aplicación
+
+Para producción angular:
+
+```sh
+ng  build --prod
+```
+
+## License
+
+MIT
+
+**Aplicación como prueba técnica!**
