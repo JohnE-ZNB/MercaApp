@@ -7,11 +7,11 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-//importamos los modulos en el modulo principal
+//importamos los modulos en el modulo principal y compartido
 import { CoreModule } from './modules/core/core.module';
 import { SharedModule } from './modules/shared/shared.module';
 
-//importamos el layout
+//importamos el layouts
 import { ProductComponent } from './layout/product/product.component';
 import { DashboardComponent } from './layout/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

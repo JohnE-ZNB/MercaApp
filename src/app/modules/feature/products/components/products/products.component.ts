@@ -12,16 +12,14 @@ export class ProductsComponent implements OnInit {
   constructor(private productsService: ProductsService) {}
 
   ngOnInit(): void {
-    //Debemos llamar al metodo de getAllProduct para que este a su vez llame al servicio
+    //Debemos llamar al metodo de getAllProduct para que este a su vez llame al servicio y traiga la informacion
     this.getProductAll();
   }
 
   products: ProductModel[] = [];
 
-  //Este metodo se encarga de hacer el llamado a servicio http
   getProductAll() {
     this.productsService.getAllProducts().subscribe((products) => {
-      //this.product nuestro array que contendrá los productos y product es el array de la respuesta del servicio
       this.products = products;
       console.log(this.products);
     });

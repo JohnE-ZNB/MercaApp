@@ -10,7 +10,7 @@ const routes: Routes = [
     component: ProductComponent,
     children: [
       {
-        path: '', //localhost:4200/    <- esta en blanco entonces lo redirecciona a inicio
+        path: '', //<- esta en blanco entonces lo redirecciona a productos
         redirectTo: 'productos',
         pathMatch: 'full',
       },

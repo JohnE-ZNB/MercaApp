@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 //Nos permite usar un cliente de modulo que esta importado en app.module.ts
 import { HttpClient } from '@angular/common/http';
 
-//Importamos el modelo porque toca TIPAR la respuesta del servicio y porque pasa eso? mira getProductsAll()
+//Importamos el modelo porque toca TIPAR la respuesta del servicio
 import { ProductModel } from './../models/product.model'
 
 import { environment } from './../../../../environments/environment';
@@ -17,10 +17,6 @@ export class ProductsService {
   ) {}
 
   getAllProducts() {
-    console.log('getAllProducts');
-    //Resulta que la petición devuelve un object y los productos son tipo array de PRODUCT (productModel)
-    //Entons cuando producto consume el servicio su respuesta y lo que espera no hace match y como se resuelve
-    //todo <ProductModel[]>
     return this.http.get<ProductModel[]>(`${environment.url_api}/productos`);
     
   }
@@ -36,7 +32,6 @@ export class ProductsService {
   }
 
   updateProduct(id: string, changes: Partial<ProductModel>) {
-    console.log(changes);
     return this.http.put(`${environment.url_api}/productos/${id}`, changes);
   }
 

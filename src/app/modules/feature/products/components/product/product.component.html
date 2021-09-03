@@ -10,7 +10,7 @@
   </div>
 
   <mat-card-content>
-    <p>{{ producto.descripcion | slice:30}}</p>
+    <p>{{ producto.descripcion | slice:0:30}}...</p>
     <p class="product-price">{{ producto.precio | currency}}</p>
     <!-- <p class="product-inventory">{{ producto.cantidad}}</p> -->
   </mat-card-content>

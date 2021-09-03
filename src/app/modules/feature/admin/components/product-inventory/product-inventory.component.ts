@@ -27,15 +27,12 @@ export class ProductInventoryComponent implements OnInit {
 
   getProductAll() {
     this.productsService.getAllProducts().subscribe((products) => {
-      //this.product nuestro array que contendrá los productos y product es el array de la respuesta del servicio
       this.products = products;
     });
   }
 
   deleteProduct(id: string) {
     this.productsService.deleteProduct(id).subscribe((response) => {
-      //this.product nuestro array que contendrá los productos y product es el array de la respuesta del servicio
-      console.log(response);
       this.getProductAll();
     });
   }

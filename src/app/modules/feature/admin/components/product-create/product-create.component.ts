@@ -56,7 +56,6 @@ export class ProductCreateComponent implements OnInit {
     if (this.formulario.valid) {
       const productoNuevo = this.formulario.value;
       this.productsService.createProduct(productoNuevo).subscribe((newProduct)=>{
-        console.log(newProduct);
         //Cuando la respuesta se positiva del servicio entons redireccionamos
         this.router.navigate(['./admin']);
       })

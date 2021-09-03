@@ -66,7 +66,6 @@ export class ProductEditComponent implements OnInit {
       this.productsService
         .updateProduct(this.id, productoModificado)
         .subscribe((modProduct) => {
-          console.log(modProduct);
           //Cuando la respuesta se positiva del servicio entons redireccionamos
           this.router.navigate(['./admin']);
         });
