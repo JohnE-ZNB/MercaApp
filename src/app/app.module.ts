@@ -12,9 +12,9 @@ import { CoreModule } from './modules/core/core.module';
 import { SharedModule } from './modules/shared/shared.module';
 
 //importamos el layout
-import {DashboardComponent} from './layout/dashboard/dashboard.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductComponent } from './layout/product/product.component';
+import { DashboardComponent } from './layout/dashboard/dashboard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({

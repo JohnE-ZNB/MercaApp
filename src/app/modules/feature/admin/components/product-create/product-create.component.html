@@ -1,0 +1,62 @@
+<section class="container">
+  <form [formGroup]="formulario" (ngSubmit)="saveProduct($event)">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Crear Producto</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <div class="col-xs">
+            <mat-form-field class="full-width">
+              <input placeholder="Nombre del Producto" formControlName="nombre" matInput type="text">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs">
+            <mat-form-field class="full-width">
+              <textarea matInput placeholder="Descripcion del Prodcuto" formControlName="descripcion" ></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs">
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>Categoria</mat-label>
+              <mat-select formControlName="categoria" name="categoria">
+                <mat-option *ngFor="let category of categories" [value]="category.value">
+                  {{category.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs">
+            <mat-form-field class="full-width">
+              <input placeholder="Precio del Producto" formControlName="precio" matInput type="number">
+            </mat-form-field>
+            <div *ngIf="campoPrecio?.errors && campoPrecio?.dirty">
+              <p *ngIf="campoPrecio?.hasError('price_invalid')">Ups!! el precio establecido es invalido</p>
+              <p *ngIf="campoPrecio?.hasError('required')">El campo es requerido</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs">
+            <mat-form-field class="full-width">
+              <input placeholder="Cantidad de Productos" formControlName="cantidad" matInput type="number">
+            </mat-form-field>
+            <div *ngIf="campoCantidad?.errors && campoCantidad?.dirty">
+              <p *ngIf="campoCantidad?.hasError('price_invalid')">Ups!! la cantidad es invalida</p>
+              <p *ngIf="campoCantidad?.hasError('required')">El campo es requerido</p>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button [disabled]="formulario.invalid" mat-raised-button type="submit">Guardar</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</section>

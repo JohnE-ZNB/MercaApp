@@ -1,7 +1,7 @@
 <mat-card class="card">
   <mat-card-header>
     <div mat-card-avatar class="card-header-image"></div>
-    <mat-card-title>{{ producto.nombre}}</mat-card-title>
+    <mat-card-title>{{ producto.nombre  | uppercase }}</mat-card-title>
     <mat-card-subtitle>{{ producto.categoria}}</mat-card-subtitle>
   </mat-card-header>
   <div class="card-container-img">
@@ -10,12 +10,12 @@
   </div>
 
   <mat-card-content>
-    <p>{{ producto.descripcion}}</p>
-    <p class="product-price">{{ producto.precio}}</p>
+    <p>{{ producto.descripcion | slice:30}}</p>
+    <p class="product-price">{{ producto.precio | currency}}</p>
     <!-- <p class="product-inventory">{{ producto.cantidad}}</p> -->
   </mat-card-content>
   <mat-card-actions>
-    <a mat-raised-button [routerLink]="['/productos', producto._id]" >
+    <a mat-raised-button [routerLink]="['/productos', producto._id]" color="primary" >
       <mat-icon>visibility</mat-icon>
       Ver detalle</a>
     

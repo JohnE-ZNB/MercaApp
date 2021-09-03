@@ -9,7 +9,14 @@ import { ProductModel } from './../.././../../core/models/product.model';
   styleUrls: ['./product-inventory.component.scss'],
 })
 export class ProductInventoryComponent implements OnInit {
-  displayedColumns: string[] = ['nombre', 'descripcion', 'categoria', 'precio', 'cantidad', 'accion'];
+  displayedColumns: string[] = [
+    'nombre',
+    'descripcion',
+    'categoria',
+    'precio',
+    'cantidad',
+    'accion',
+  ];
   constructor(private productsService: ProductsService) {}
 
   ngOnInit(): void {
@@ -25,7 +32,7 @@ export class ProductInventoryComponent implements OnInit {
     });
   }
 
-  deleteProduct(id:string){
+  deleteProduct(id: string) {
     this.productsService.deleteProduct(id).subscribe((response) => {
       //this.product nuestro array que contendrá los productos y product es el array de la respuesta del servicio
       console.log(response);
