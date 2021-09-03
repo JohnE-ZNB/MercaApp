@@ -3,7 +3,7 @@
 
 Link de la aplicación: "http://mercaapp.web-host.s3-website-us-east-1.amazonaws.com" desplegado en un Buckets AWS S3
 
-## Caracteristias
+## Características
 
 - Consultar todos los productos
 - Ver un producto más detallado
@@ -12,13 +12,13 @@ Link de la aplicación: "http://mercaapp.web-host.s3-website-us-east-1.amazonaws
 
 ## Tecnología
 
-Dillinger uses a number of open source projects to work properly:
+Se trabajó con la siguientes herramientas:
 
 - [Angular CLI](https://github.com/angular/angular-cli) - versión 12.2.4.!
 - [Material Angular](https://github.com/angular/components) version 12.2.4 
 - [flexboxgrid](https://github.com/kristoferjoseph/flexboxgrid) version 6.3.1.
 
-## Installation
+## Instalación
 
 Angular
 ```sh
@@ -46,7 +46,7 @@ Inicio de servidor local "http://localhost:4200/"
 ng serve
 ```
 
-## construcción de la aplicación
+## Construcción de la aplicación
 
 Para producción angular:
 
@@ -54,8 +54,8 @@ Para producción angular:
 ng  build --prod
 ```
 
-## License
+## Licencia
 
 MIT
 
-**Aplicación como prueba técnica!**
+**Aplicación como prueba técnica**
